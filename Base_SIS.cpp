@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Name£ºËæ»úÍøÂçSISÄ£ĞÍ
+Nameï¼šéšæœºç½‘ç»œSISæ¨¡å‹
 
 **********************************************************************/
 
@@ -27,9 +27,9 @@ int** adjacentMatrix;
 
 const int NETWORK_SIZE = 10000, N = NETWORK_SIZE, step = 100;
 
-const double PROBABILITY_OF_EAGE = 0.0004;//Á¬½Ó¸ÅÂÊ
+const double PROBABILITY_OF_EAGE = 0.0004;//è¿æ¥æ¦‚ç‡
 
-const double bate = 0.25, miu = 0.2;//bate:¸ĞÈ¾ÂÊ£¬miu:»Ö¸´ÂÊ
+const double bate = 0.25, miu = 0.2;//bate:æ„ŸæŸ“ç‡ï¼Œmiu:æ¢å¤ç‡
 
 int x[N];
 
@@ -63,7 +63,7 @@ void initial()
 {
 	int i, j, max = 0, maxd;
 
-	for (i = 0; i < N; i++)//ËùÓĞ½ÚµãÉèÎªSÌ¬
+	for (i = 0; i < N; i++)//æ‰€æœ‰èŠ‚ç‚¹è®¾ä¸ºSæ€
 	{
 		p1->X[i] = 0;
 
@@ -78,7 +78,7 @@ void initial()
 
 		}
 	}
-	p1->X[0] = 1;//¶È×î´óµÄÉèÎªIÌ¬
+	p1->X[0] = 1;//åº¦æœ€å¤§çš„è®¾ä¸ºIæ€
 
 }
 
@@ -120,7 +120,7 @@ void spread()
 				r = rand() / (double)RAND_MAX;
 				if (r < miu)
 				{
-					x[i] = 0;//µÈÓÚ0ÎªSISÄ£ĞÍ£¬µÈÓÚ2ÎªSIRÄ£ĞÍ
+					x[i] = 0;//ç­‰äº0ä¸ºSISæ¨¡å‹ï¼Œç­‰äº2ä¸ºSIRæ¨¡å‹
 				}
 			}
 		}
